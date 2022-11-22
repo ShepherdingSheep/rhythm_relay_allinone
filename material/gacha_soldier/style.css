@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'KOHIBaeumOTF', sans-serif;
+}
+
+div.set{
+    width: 700px;
+    height: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header{
+    width: 700px;
+    height: 200px;
+    background-image: url('./title_background.png');
+}
+
+.title{
+    width: 700px;
+    height: 170px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.sub_title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -150%);
+    font-size: 15pt;
+}
+
+.main_title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 25pt;
+}
+
+article.pan{
+    padding: 10px;
+    width: 680px;
+    height: 400px;
+    background-color: azure;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    pointer-events: none;
+}
+
+footer{
+    width: 700px;
+    height: 100px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.paper{
+    width: 8%;
+    height: 60px;
+    background-color: greenyellow;
+    display: inline-block;
+    margin: 9px 5px;
+    text-align: center;
+    font-size: 12pt;
+    line-height: 65px;
+}
+
+.youwin{
+    background-color: dodgerblue;
+    color: lightsteelblue;
+    font-weight: 800;
+    font-size: 25pt;
+    pointer-events: none;
+}
+.notover{
+    background-color: crimson;
+    color: mistyrose;
+    font-weight: 600;
+    font-size: 9pt;
+}
+
+.fxbutton{
+    width: 20%;
+    height: 80px;
+    margin: 10px 10px;
+}
+
+.credit{
+    border: 2px inset gray;
+    width: 10%;
+    height: 80px;
+    margin: 10px 10px;
+    margin-left: 50px;
+    background-color: black;
+    color: red;
+    font-size: 40pt;
+    line-height: 95px;
+}

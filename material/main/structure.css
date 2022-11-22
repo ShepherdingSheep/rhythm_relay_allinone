@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 600vh;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+nav.slider_wrap{
+    width: 15vw;
+    height: 100vh;
+    background-color: midnightblue;
+    position: fixed;
+}
+aside{
+    background-color: midnightblue;
+    width: 15vw;
+    height: 600vh;
+    float: left;
+}
+li.items{
+    width: 80%;
+    height: 20px;
+    padding: 10% 10%;
+    list-style-type: none;
+    color: white;
+    font-weight: 800;
+    font-size: 15pt;
+    line-height: 20px;
+    cursor: pointer;
+}
+li.items:hover{
+    background-color: cornflowerblue;
+}
+li#items_credit{
+    background-image: linear-gradient(to right, #16b53b 0%, #f97ce8 100%);
+}
+article{
+    display: inline-block;
+    width: 85vw;
+    height: 600vh;
+    background-color: aliceblue;
+}
+article.select_area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+div#contents_alphabet{
+    background-color: lightblue;
+}
+div#contents_keygacha{
+    background-color: chocolate;
+}
+div#contents_membergacha{
+    background-color: darksalmon;
+}
+div.contents{
+    width: 100%;
+    height: 100vh;
+}
+
+footer{
+    justify-content: center;
+    align-items: center;
+}
+
+footer > button {
+    height: 70px;
+    line-height: 70px;
+}

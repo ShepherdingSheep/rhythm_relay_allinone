@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퇴근해도 룰렛이 쌓여있잖아</title>
+    <link rel="stylesheet" href="./material/main/structure.css">
+    <link rel="stylesheet" href="./material/gacha_soldier/stylefornewbobgi.css">
+    <link rel="stylesheet" href="./material/gacha_soldier/styleforrerollbooth.css">
+    <link rel="stylesheet" href="./material/key_select/styleforkeygacha.css">
+    <link rel="stylesheet" href="./material/arcaea_select/styleforarcaeagaugegacha.css">
+    <link rel="stylesheet" href="./material/muse_select/styleformembergacha.css">
+    <link rel="stylesheet" href="./material/sudden/styleforsudden.css">
+    <link rel="stylesheet" href="./material/gacha_soldier/styleforyoufuckedstation.css">
+    <link rel="shortcut icon" href="./material/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./material/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="slider_wrap" id="nav_slider">
+        <li class="items" id="items_gachasanai">퇴근 뽑기</li>
+        <li class="items" id="items_alphabet">알파벳 리롤</li>
+        <li class="items" id="items_keygacha">투온, 디맥 키 뽑기</li>
+        <li class="items" id="items_membergacha">뮤대 멤버 뽑기</li>
+        <li class="items" id="items_arcaeagacha">아르케아 게이지 뽑기</li>
+        <li class="items" id="items_sudden">서든데스 한정 Rule</li>
+        <li class="items" id="items_setting">개발자.. X댓서..</li>
+        <li class="items" id="items_credit">Credit</li>
+    </nav>
+    <aside>
+
+    </aside>
+    <article class="app_wrap">
+        <div class="contents" id="contents_gachasanai">
+            <div class="set">
+                <header class="name">
+                    <div class="title">
+        
+                    </div>
+                    <div class="bob_status">
+                        <div class="status_text">남은 쪽지 수: <span id="status_lastPaper">40</span>개 / 당첨 확률: <span id="status_probable">2.5</span>% / <span id="dragon_ball">☆ ☆ ☆ (3개 찾으면 퇴근)</span></div>
+                    </div>
+                </header>
+                <article class="pan" id="bobgi_pan">
+
+                </article>
+                <footer class="button">
+                    <button class="fxbutton" onclick="coin_in(1)">CLEAR (+1개)</button>
+                    <button class="fxbutton" onclick="coin_in(2)">FC (+2개)</button>
+                    <button class="fxbutton" onclick="coin_in(3)">PERFECT (+3개)</button>
+                    <div class="credit" id="credit_coin">
+                        0
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="contents" id="contents_alphabet">
+            <div class="set">
+                <header id="alpha_head"></header>
+                <article id="alpha_pan">
+                    <div id="alpha_pan_roulette">
+                        <div class="alpha_roulette_slot" id="a_slot_1">A</div>
+                        <div class="alpha_roulette_slot" id="a_slot_2">B</div>
+                        <div class="alpha_roulette_slot" id="a_slot_3">C</div>
+                    </div>
+                    <div class="alpha_status">
+                        추첨 대상 알파벳
+                        <div id="alpha_pan_target">
+                            A B C D F G H I J K L M O P Q U V W X Z
+                        </div>
+                    </div>
+                    <div class="alpha_status">
+                        추첨 제한 알파벳
+                        <div id="alpha_pan_ban">
+                            E N R S T Y 
+                        </div>
+                    </div>
+                    <button id="alpha_roll">GO!</button>
+                </article>
+                <footer id="alpha_button">
+                    <input id="in_alphabet_ban" maxlength="1"><button id="alpha_ban">금지시키기</button>
+                    <input id="in_alphabet_pick" maxlength="1"><button id="alpha_pick">포함시키기</button>
+                </footer>
+            </div>
+        </div>
+        <div class="contents" id="contents_keygacha">
+            <header id="key_head"></header>
+            <article class="select_area" id="key_pick">
+                <div class="key_rail">
+                    <div id="key_1"><img src="./material/key_select/key_img/key_img_4.png" class="key_img" id="key_img_1"></div>
+                    <div id="key_2"><img src="./material/key_select/key_img/key_img_5.png" class="key_img" id="key_img_2"></div>
+                    <div id="key_3"><img src="./material/key_select/key_img/key_img_6.png" class="key_img" id="key_img_3"></div>
+                    <div id="key_4"><img src="./material/key_select/key_img/key_img_8.png" class="key_img" id="key_img_4"></div>
+                </div>
+                <div class="key_button_rail">
+                    <button id="key_b1">뒤집기</button>
+                    <button id="key_b2">뒤집기</button>
+                    <button id="key_b3">뒤집기</button>
+                    <button id="key_b4">뒤집기</button>
+                </div>
+            </article>
+            <footer id="key_button"><button id="key_reroll">다시 뽑기</button></footer>
+        </div>
+        <div class="contents" id="contents_membergacha">
+            <header id="member_head"></header>
+            <article class="select_area" id="member_pick">
+                <div class="member_rail">
+                    <div id="member_1"></div>
+                    <div id="member_2"></div>
+                    <div id="member_3"></div>
+                    <div id="member_4"></div>
+                </div>
+            </article>
+            <footer id="member_button"><button id="member_all_show">다른 범위 표시</button><button id="member_reroll">다시 뽑기</button></footer>
+        </div>
+        <div class="contents" id="contents_arcaeagauge">
+            <header id="arcaea_head"></header>
+            <article class="select_area" id="arcaea_machine">
+                <div id="arcaea_goods">
+                    <div class="goods_menu" id="arcaea_menu_1"></div>
+                    <div class="goods_menu" id="arcaea_menu_2"></div>
+                    <div class="goods_menu" id="arcaea_menu_3"></div>
+                    <div class="goods_menu" id="arcaea_menu_4"></div>
+                    <div class="goods_menu" id="arcaea_menu_5"></div>
+                </div>
+                <div id="arcaea_select">
+                    <button class="arcaea_button" id="arcaea_select_1">선택</button>
+                    <button class="arcaea_button" id="arcaea_select_2">선택</button>
+                    <button class="arcaea_button" id="arcaea_select_3">선택</button>
+                    <button class="arcaea_button" id="arcaea_select_4">선택</button>
+                    <button class="arcaea_button" id="arcaea_select_5">선택</button>
+                </div>
+            </article>
+            <footer id="arcaea_button"><button id="arcaea_reroll">다시 뽑기</button></footer>
+        </div>
+        <div class="contents" id="contents_suddendeath">
+            <header id="sudden_head"></header>
+            <article class="select_area" id="sudden_pick">
+                <div class="sudden_rail">
+                    <div id="sudden_1"></div>
+                    <div id="sudden_2"></div>
+                    <div id="sudden_3"></div>
+                    <div id="sudden_4"></div>
+                </div>
+            </article>
+            <footer id="sudden_button"><button id="sudden_all_show">다른 범위 표시</button><button id="sudden_reroll">다시 뽑기</button></footer>
+        </div>
+        <div class="contents" id="contents_youfucked">
+            <article class="select_area" id="fucked_pick">
+                <div class="fucked_rail">
+                    <button id="open_target_1">1번 당첨번호 누르기</button>
+                    <button id="open_target_2">2번 당첨번호 누르기</button>
+                    <button id="open_target_3">3번 당첨번호 누르기</button>
+                </div>
+                <div class="fucked_rail">
+                    당첨번호 아닌 쪽지: 
+                    <input type="number" id="nonetarget_gesu" min="0" max="37" placeholder="개수 입력 (0~37)">
+                    <button id="open_nonetarget">누르기</button>
+                </div>
+                <div class="status">
+                    현재 남은 꽝 쪽지: <span id="left_bomb">37</span>개
+                </div>
+            </article>
+        </div>
+    </article>
+    <script src="./material/main/structure.js" type="text/javascript"></script>
+    <script src="./material/gacha_soldier/script.js" type="text/javascript"></script>
+    <script src="./material/gacha_soldier/rerollbooth.js" type="text/javascript"></script>
+    <script src="./material/key_select/keygacha.js" type="text/javascript"></script>
+    <script src="./material/muse_select/membergacha.js" type="text/javascript"></script>
+    <script src="./material/sudden/suddenattack2.js" type="text/javascript"></script>
+    <script src="./material/gacha_soldier/youfuckedstation.js" type="text/javascript"></script>
+</body>
+</html>

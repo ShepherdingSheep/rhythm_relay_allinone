@@ -1,0 +1,63 @@
+header#sudden_head{
+    width: 100%;
+    height: 200px;
+    background-image: url('./head_background.png');
+    background-position-x: center;
+}
+article#sudden_pick{
+    background-color: lightpink;
+    cursor: url(./cursor.png) 15 15, auto;
+}
+div.sudden_rail{
+    width: 85%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+div.sudden_rail > div{
+    width: 300px;
+    height: 450px;
+}
+div.sudden_rail > div:hover{
+    background-color: red;
+}
+#sudden_1{
+    background-image: url('./target_1.png');
+    background-size: cover;
+}
+#sudden_2{
+    background-image: url('./target_2.png');
+    background-size: cover;
+}
+#sudden_3{
+    background-image: url('./target_3.png');
+    background-size: cover;
+}
+#sudden_4{
+    background-image: url('./target_4.png');
+    background-size: cover;
+}
+footer#sudden_button{
+    background-color: red;
+}
+
+footer#sudden_button > button{
+    margin: 0 10px;
+}
+
+@media screen and (max-height: 720px){
+    div.sudden_rail{
+        width: 85%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    div.sudden_rail > div{
+        width: 200px;
+        height: 300px;
+    }
+}

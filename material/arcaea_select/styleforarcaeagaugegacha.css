@@ -1,0 +1,81 @@
+header#arcaea_head{
+    width: 100%;
+    height: 200px;
+    background-image: url('./head_background.png');
+    background-position-x: center;
+}
+
+div#arcaea_goods{
+    width: 85%;
+    height: 300px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    background-color: aquamarine;
+    border: 3px inset aqua;
+}
+
+div#arcaea_select{
+    width: 85%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+button.arcaea_button{
+    width: 100px;
+    margin: 0 69px;
+}
+
+div.goods_menu{
+    height: 300px;
+    width: 150px;
+    margin: 0 43px;
+}
+
+div#arcaea_menu_1{
+    background-image: url('./arcaea_drink/arcaea_can.png');
+    background-size: contain;
+}
+
+div#arcaea_menu_2{
+    background-image: url('./arcaea_drink/arcaea_ddungcan.png');
+    background-size: contain;
+}
+
+div#arcaea_menu_3{
+    background-image: url('./arcaea_drink/arcaea_pet.png');
+    background-size: contain;
+}
+
+div#arcaea_menu_4{
+    background-image: url('./arcaea_drink/arcaea_ionpet.png');
+    background-size: contain;
+}
+
+div#arcaea_menu_5{
+    background-image: url('./arcaea_drink/arcaea_powder.png');
+    background-size: contain;
+}
+
+@media screen and (max-width: 1600px){
+    div.goods_menu{
+        height: 200px;
+        width: 100px;
+        margin: 0 43px;
+    }
+}
+
+@media screen and (max-width: 1270px){
+    div.goods_menu{
+        height: 100px;
+        width: 50px;
+        margin: 0 43px;
+    }
+}

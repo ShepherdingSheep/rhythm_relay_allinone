@@ -1,0 +1,116 @@
+header#alpha_head{
+    width: 100%;
+    height: 200px;
+    background-image: url('../gacha_soldier/reroll_title_background.png');
+    background-position-x: center;
+}
+
+article#alpha_pan{
+    background-color: bisque;
+    height: 600px;
+}
+
+div#alpha_pan_roulette{
+    margin: 30px auto;
+    width: 50%;
+    height: 180px;
+    border: 5px outset hotpink;
+    background-image: linear-gradient(to right, #aaaaaa 0%, white 30%, white 70%, #aaaaaa 100%);
+}
+
+div.alpha_roulette_slot{
+    display: inline-block;
+    width: 30%;
+    height: 92%;
+    line-height: 180px;
+    font-size: 60pt;
+}
+
+div#a_slot_2{
+    border: 8px solid red;
+    border-radius: 15px;
+    color: red;
+}
+
+div#alpha_pan_target, div#alpha_pan_ban{
+    width: 40%;
+    height: 50px;
+    margin: 10px auto;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15pt;
+}
+
+button#alpha_roll{
+    margin: 20px;
+    width: 20%;
+    height: 80px;
+    font-size: 25pt;
+    line-height: 80px;
+}
+
+footer#alpha_button{
+    width: 100%;
+    height: 100px;
+    background-color: cornflowerblue;
+    justify-content: center;
+    align-items: center;
+}
+
+footer#alpha_button > * {
+    height: 70px;
+}
+
+#in_alphabet_ban, #in_alphabet_pick{
+    border: 3px solid red;
+    width: 150px;
+    margin: 0 20px;
+    font-size: 30pt;
+    text-align: center;
+}
+
+#in_alphabet_pick{
+    border: 3px solid blue;
+}
+
+@media screen and (max-height: 850px) {
+    div#alpha_pan_target, div#alpha_pan_ban{
+        width: 40%;
+        height: 30px;
+        margin: 5px auto;
+        background-color: white;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 30px;
+        font-size: 8pt;
+    }
+    div#alpha_pan_roulette{
+        margin: 5px auto;
+        width: 50%;
+        height: 60px;
+        border: 5px outset hotpink;
+        background-image: linear-gradient(to right, #aaaaaa 0%, white 30%, white 70%, #aaaaaa 100%);
+    }
+    div.alpha_roulette_slot{
+        display: inline-block;
+        width: 30%;
+        height: 92%;
+        line-height: 60px;
+        font-size: 20pt;
+    }
+    button#alpha_roll{
+        margin: 20px;
+        width: 20%;
+        height: 40px;
+        font-size: 15pt;
+        line-height: 30px;
+    }
+
+    div#a_slot_2{
+        border: 4px solid red;
+        border-radius: 15px;
+        color: red;
+    }
+  }
