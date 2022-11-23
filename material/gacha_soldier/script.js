@@ -10,7 +10,7 @@ do {
 
 let starscore = 0;
 let last_paper = 40;
-let last_probable = 2.5;
+let last_probable = 7.5;
 let coin = 0;
 const wrongsong = new Audio('./material/gacha_soldier/sound/Quiz-Wrong_Buzzer02-1.mp3');
 const rightsong = new Audio('./material/gacha_soldier/sound/Quiz-Question02-1.mp3');
@@ -33,7 +33,7 @@ const SelectPaper = (num) => {
         last_paper -= 1;
         starscore += 1;
         coin -= 1;
-        last_probable = (1/last_paper*100).toFixed(2);
+        last_probable = ((3-starscore)/last_paper*100).toFixed(2);
         document.getElementById('status_lastPaper').innerHTML = last_paper;
         document.getElementById('status_probable').innerHTML = last_probable;
         setTimeout(function(){rightsong.play();}, 300);
@@ -44,7 +44,7 @@ const SelectPaper = (num) => {
         document.getElementById(targetid).classList.add('notover');
         document.getElementById(targetid).innerHTML = '아냐~';
         last_paper -= 1;
-        last_probable = (1/last_paper*100).toFixed(2);
+        last_probable = ((3-starscore)/last_paper*100).toFixed(2);
         coin -= 1;
         document.getElementById('status_lastPaper').innerHTML = last_paper;
         document.getElementById('status_probable').innerHTML = last_probable;
@@ -63,6 +63,7 @@ const getscore = () => {
             document.getElementsByClassName('youwin').item(i).innerHTML = '끝!'
         }
         coin = 0;
+        document.getElementById('status_probable').innerHTML = '<품 절>'
         document.getElementById('dragon_ball').innerHTML = '★ 퇴 ★ 근 ★';
         document.getElementById('bobgi_pan').style.pointerEvents = 'none';
     } else if (starscore == 2){
