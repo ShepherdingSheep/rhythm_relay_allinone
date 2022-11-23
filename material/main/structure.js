@@ -52,6 +52,7 @@ items_membergacha.onclick = () => {
 
 items_arcaeagacha.onclick = () => {
     goforthe(4);
+    arcaea_restart();
 };
 
 items_sudden.onclick = () => {

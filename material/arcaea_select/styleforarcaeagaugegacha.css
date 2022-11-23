@@ -64,6 +64,16 @@ div#arcaea_menu_5{
     background-size: contain;
 }
 
+img.goods{
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+button#arcaea_all_show{
+    margin: 0 10px;
+}
+
 @media screen and (max-width: 1600px){
     div.goods_menu{
         height: 200px;
