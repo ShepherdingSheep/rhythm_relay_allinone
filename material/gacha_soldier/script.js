@@ -1,12 +1,12 @@
-let targetnumber_1 = Math.floor(Math.random()*40)+1;
-let targetnumber_2 = Math.floor(Math.random()*40)+1;
-let targetnumber_3 = Math.floor(Math.random()*40)+1;
+let targetnumber_1 = 0;
+let targetnumber_2 = 0;
+let targetnumber_3 = 0;
 
 do {
     targetnumber_1 = Math.floor(Math.random()*40)+1;
     targetnumber_2 = Math.floor(Math.random()*40)+1;
     targetnumber_3 = Math.floor(Math.random()*40)+1;
-} while (targetnumber_1 != targetnumber_2 != targetnumber_3)
+} while (new Set([targetnumber_1, targetnumber_2, targetnumber_3]).size < 3);
 
 let starscore = 0;
 let last_paper = 40;
