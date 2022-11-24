@@ -1,5 +1,7 @@
 let alpha_target = ['A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J' ,'K', 'L', 'M', 'O', 'P', 'Q', 'U', 'V', 'W', 'X', 'Z'];
 let alpha_nonetarget = ['E', 'N', 'R', 'S', 'T', 'Y'];
+const rolling_sound = new Audio('./material/sound_archive/rolling.wav');
+const rolling_done_sound = new Audio('./material/sound_archive/rolling_done.wav');
 
 const alpha_target_change = () => {
     document.getElementById('alpha_pan_target').innerHTML = '';
@@ -28,6 +30,8 @@ const alpha_reroll = (seed) => {
             alpha_seed = seed * 2;
             break;
     };
+    rolling_sound.currentTime = 0;
+    rolling_sound.play();
     var alpha_nowrolling = setInterval(function(){
         var random_number = 0;
         document.getElementById('alpha_roll').style.pointerEvents = 'none';
@@ -44,7 +48,8 @@ const alpha_reroll = (seed) => {
             document.getElementById('a_slot_3').innerHTML = alpha_target[random_number+1];
         };
     }, 50);
-    setTimeout(function(){clearInterval(alpha_nowrolling); document.getElementById('alpha_roll').style.pointerEvents = 'all';}, alpha_seed);
+    setTimeout(function(){clearInterval(alpha_nowrolling); document.getElementById('alpha_roll').style.pointerEvents = 'all';rolling_sound.pause();rolling_done_sound.currentTime=0;rolling_done_sound.play();}, alpha_seed);
+    setTimeout(function(){rolling_done_sound.pause();},alpha_seed+1000);
 }
 
 in_alphabet_ban.onkeyup = () => {

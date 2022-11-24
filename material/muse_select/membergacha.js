@@ -77,6 +77,8 @@ const muse_all_select = () => {
     }
 }
 
+const muse_drum = new Audio('./material/sound_archive/muse_selected.wav');
+
 member_all_show.onclick = () => {
     muse_all_select();
 }
@@ -85,24 +87,36 @@ member_1.onclick = () => {
     muse_selection(1);
     member_1.onmouseover = '';
     member_1.onmouseleave = '';
+    muse_drum.currentTime = 0;
+    muse_drum.play();
+    setTimeout(function(){muse_drum.pause();}, 2000);
 }
 
 member_2.onclick = () => {
     muse_selection(2);
     member_2.onmouseover = '';
     member_2.onmouseleave = '';
+    muse_drum.currentTime = 0;
+    muse_drum.play();
+    setTimeout(function(){muse_drum.pause();}, 2000);
 }
 
 member_3.onclick = () => {
     muse_selection(3);
     member_3.onmouseover = '';
     member_3.onmouseleave = '';
+    muse_drum.currentTime = 0;
+    muse_drum.play();
+    setTimeout(function(){muse_drum.pause();}, 2000);
 }
 
 member_4.onclick = () => {
     member_4.onmouseover = '';
     member_4.onmouseleave = '';
     muse_selection(4);
+    muse_drum.currentTime = 0;
+    muse_drum.play();
+    setTimeout(function(){muse_drum.pause();}, 2000);
 }
 
 member_reroll.onclick = () => {

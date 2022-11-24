@@ -38,24 +38,38 @@ const arcaea_buy = (num) => {
     document.getElementById(target_img).style.visibility = 'visible';
 }
 
+const vending_sound = new Audio('./material/sound_archive/arcaea_selected.wav');
+
 arcaea_select_1.onclick = () => {
     document.getElementById('arcaea_machine').style.pointerEvents = 'none';
     arcaea_buy(1);
+    vending_sound.currentTime = 0;
+    vending_sound.play();
+    setTimeout(function(){vending_sound.pause();}, 1000);
 }
 
 arcaea_select_2.onclick = () => {
     document.getElementById('arcaea_machine').style.pointerEvents = 'none';
     arcaea_buy(2);
+    vending_sound.currentTime = 0;
+    vending_sound.play();
+    setTimeout(function(){vending_sound.pause();}, 1000);
 }
 
 arcaea_select_3.onclick = () => {
     document.getElementById('arcaea_machine').style.pointerEvents = 'none';
     arcaea_buy(3);
+    vending_sound.currentTime = 0;
+    vending_sound.play();
+    setTimeout(function(){vending_sound.pause();}, 1000);
 }
 
 arcaea_select_4.onclick = () => {
     document.getElementById('arcaea_machine').style.pointerEvents = 'none';
     arcaea_buy(4);
+    vending_sound.currentTime = 0;
+    vending_sound.play();
+    setTimeout(function(){vending_sound.pause();}, 1000);
 }
 
 arcaea_select_5.onclick = () => {

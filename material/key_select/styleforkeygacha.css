@@ -43,7 +43,7 @@ div.key_button_rail > button{
 }
 
 div.key_rail > div.key_selected{
-    animation: key_revert 2s linear 1;
+    animation: key_revert 4s linear 1;
 }
 
 .key_img{

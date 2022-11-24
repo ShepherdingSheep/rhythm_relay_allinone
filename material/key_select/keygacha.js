@@ -1,11 +1,13 @@
+const key_turning_sound = new Audio('./material/sound_archive/key_yooo.wav');
+
 const key_turn = (num) => {
     var key_id = 'key_'+num;
     var key_img_id = 'key_img_'+num;
     var key_turn_target = document.getElementById(key_id);
     key_turn_target.classList.add('key_selected');
-    setTimeout(function(){key_turn_target.classList.remove('key_selected');},2000);
+    setTimeout(function(){key_turn_target.classList.remove('key_selected');},4000);
     document.getElementById('key_pick').style.pointerEvents = 'none';
-    setTimeout(function(){document.getElementById(key_img_id).style.visibility='visible';key_turn_target.style.backgroundImage="url('./material/key_select/rear_active.png')";}, 1000);
+    setTimeout(function(){document.getElementById(key_img_id).style.visibility='visible';key_turn_target.style.backgroundImage="url('./material/key_select/rear_active.png')";}, 2000);
 };
 
 const key_restart = () => {
@@ -28,18 +30,30 @@ const key_restart = () => {
 
 key_1.onclick = key_b1.onclick = () => {
     key_turn(1);
+    key_turning_sound.currentTime = 0;
+    key_turning_sound.play();
+    setTimeout(function(){key_turning_sound.pause();},6000);
 }
 
 key_2.onclick = key_b2.onclick = () => {
     key_turn(2);
+    key_turning_sound.currentTime = 0;
+    key_turning_sound.play();
+    setTimeout(function(){key_turning_sound.pause();},6000);
 }
 
 key_3.onclick = key_b3.onclick = () => {
     key_turn(3);
+    key_turning_sound.currentTime = 0;
+    key_turning_sound.play();
+    setTimeout(function(){key_turning_sound.pause();},6000);
 }
 
 key_4.onclick = key_b4.onclick = () => {
     key_turn(4);
+    key_turning_sound.currentTime = 0;
+    key_turning_sound.play();
+    setTimeout(function(){key_turning_sound.pause();},6000);
 }
 
 key_reroll.onclick = () => {
