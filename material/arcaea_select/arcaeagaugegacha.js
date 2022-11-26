@@ -75,6 +75,9 @@ arcaea_select_4.onclick = () => {
 arcaea_select_5.onclick = () => {
     document.getElementById('arcaea_machine').style.pointerEvents = 'none';
     arcaea_buy(5);
+    vending_sound.currentTime = 0;
+    vending_sound.play();
+    setTimeout(function(){vending_sound.pause();}, 1000);
 }
 
 arcaea_reroll.onclick = () => {
